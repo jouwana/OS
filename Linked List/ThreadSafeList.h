@@ -10,6 +10,8 @@ using namespace std;
 template <typename T>
 class List 
 {
+	//private section is at the bottom, include a initLock
+	
     public:
         /**
          * Constructor
@@ -25,6 +27,17 @@ class List
                 std::cerr << "malloc: failed";
                 exit(-1);
             }
+		
+	    // if you get an error - delete the next "if" section
+	    if (pthread_mutex_init(initLock, NULL) != 0)
+            {
+
+                free(initLock);
+
+           	return nullptr;
+            }
+
+
 //            this->head = makeNode(NULL,NULL);
 //            if(this->head == nullptr) {
 //                std::cerr << "makeNode: failed";
