@@ -1,2 +1,2 @@
-a thread safe linked list in c++
+a generic thread safe linked list in c++
 uses hand to hand locking, and mutexes.
