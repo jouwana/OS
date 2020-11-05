@@ -1,2 +1,2 @@
 # OS
-codes for operating systems course : mallocs and threadsafe linked list
+codes for operating systems course : implementations of mallocs and threadsafe linked list
